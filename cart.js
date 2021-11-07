@@ -21,7 +21,7 @@ function removeItem(obj) {
   }
 }
 
-// ad the currently selected product to the local storage data
+// add the currently selected product to the local storage data
 function addItem() {
   // get stored value of cart items
   var cartItemsString = localStorage.getItem("cartItems")
@@ -51,9 +51,11 @@ function updatePage() {
   // check if value exists in local storage
   if (cartItemsString !== null) {
     var cartItems = JSON.parse(cartItemsString) // converting stored string to object
-    // update the cart # element
+    // update the cart # element and subtotal
     var counterNode = document.getElementById("cart-number")
     counterNode.innerText = cartItems.length
+    var subtotal = document.getElementById("subtotal")
+    subtotal.innerText = "$ " + cartItems.length * 47.99
     // for every item in our cart, create a new list item under cart-list
     var cartList = document.getElementById("cart-list")
     cartList.innerHTML = ""

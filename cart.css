@@ -84,7 +84,7 @@
 .shopping {
     position: absolute;
     top:44%;
-    left:10%;
+    left:12%;
 
 }
 
@@ -94,6 +94,25 @@
     left:10%;
 /* black space in bottom of the page*/
     padding-bottom: 50px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top:  60%;
+    left: 60%;
+}
+
+#subtotal {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top:  62.5%;
+    left: 67%;
 }
 
 

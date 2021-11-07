@@ -40,6 +40,8 @@
     <br>
     <!-- <img class="shopping" src="shopping_c.jpg" alt="shopping information section" style="width:976.8px;height:237.6px"> -->
     <div class="shopping">
+      <h3>Shopping Cart</h3>
+
       Color:
       <select id="color-dropdown">
         <option>After school special</option>
@@ -47,15 +49,19 @@
         <option>Cozy denim</option>
         <option>Raining day</option>
       </select>
+      &nbsp
       Filling:
       <select id="filling-dropdown">
         <option>Duck down</option>
         <option>Poly-blend</option>
         <option>Memory foam</option>
       </select>
+      &nbsp
+      $ 47.99
       Quantity:
       <input id="quantity-number" min=1 type="number" value=1 />
-      <button id="add-button" onclick="addButton()">Add</button>
+      &nbsp
+      <button href="#0" id="add-button" onclick="addButton()">Update</button>
       <br>
       <br>
       What is in your cart:
@@ -66,6 +72,11 @@
 
       </ul>
     </div>
+    <div>
+      <h4>Subtotal</h4>
+      <span id="subtotal">$&nbsp0</span>
+    </div>
+
     <br>
     <img class="similar" src="similar_c.jpg" alt="similar items section" style="width:1197.9px;height:231px">
   </body>
