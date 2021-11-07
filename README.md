@@ -20,6 +20,7 @@ Cart functions:
 # Credits
 Add to cart functions learned from: tutorial of https://codyhouse.co/gem/add-to-cart-interaction
 Icon: https://www.figma.com/community/file/878585965681562011/Material-Design-Icons
+Lab tutorial of cart function: https://codepen.io/arkanecow/pen/mdMpJxr
 
 Pink pillow pictures: https://www.amazon.com/Batmerry-Pillows-Decorative-Chinese-Pillowcase/dp/B07MK8GW9W
 Green pillow picture: https://www.wayfair.com/decor-pillows/pdp/east-urban-home-spring-light-green-throw-pillow-etrc8358.html
