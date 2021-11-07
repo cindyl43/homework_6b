@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="cart.css">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
+     <!-- javascript -->
+    <script src="cart.js" type="text/javascript"></script>
     <title>MashPillow Browsing Page</title>
     <!-- search bar-->
     <div class = "wrapper">
@@ -15,8 +17,11 @@
       <img class="image-icon" src="image.jpg" alt="image search icon">
     </div>
     <img class="login" src="login.jpg" alt="login portal" style="width:40px;height:40px">
-    <img class="cart" src="cart.jpg" alt="cart" style="width:35px;height:35px">
-    <img class="indicator" src="filled_c.jpg" alt="cart quantity" style="width:15px;height:15px">
+    <div>
+      <img class="cart" src="cart.jpg" alt="cart" style="width:35px;height:35px">
+      # of items in your cart:
+      <span id="cart-number">0</span>
+    </div>
     <!-- logo hyperlink-->
     <a href="index.html">
       <img src="logo.jpg" alt="MashPillow Logo" id="logo">
@@ -29,11 +34,38 @@
     <img class="back" src="back_c.jpg" alt="back to product page"></a>
     <br>
     <br>
-    <img class="rewards" src="rewards_c.jpg" alt="rewards section" style="width:976.8px;height:102.3px">
+    <!-- <img class="rewards" src="rewards_c.jpg" alt="rewards section" style="width:976.8px;height:102.3px"> -->
     <br>
     <img class="checkout" src="checkout_c.jpg" alt="check out section" style="width:191.4px;height:372.9px">
     <br>
-    <img class="shopping" src="shopping_c.jpg" alt="shopping information section" style="width:976.8px;height:237.6px">
+    <!-- <img class="shopping" src="shopping_c.jpg" alt="shopping information section" style="width:976.8px;height:237.6px"> -->
+    <div>
+      What is in your cart:
+      <div id="placeholder-text">
+        Nothing so far...
+      </div>
+      <ul id="cart-list">
+
+      </ul>
+    </div>
+    <div>
+      Color:
+      <select id="color-dropdown">
+        <option>After school special</option>
+        <option>Morning haze</option>
+        <option>Cozy denim</option>
+        <option>Raining day</option>
+      </select>
+      Filling:
+      <select id="filling-dropdown">
+        <option>Duck down</option>
+        <option>Poly-blend</option>
+        <option>Memory foam</option>
+      </select>
+      Quantity:
+      <input id="quantity-number" min=1 type="number" value=1 />
+      <button id="add-button" onclick="addButton()">Add</button>
+    </div>
     <br>
     <img class="similar" src="similar_c.jpg" alt="similar items section" style="width:1197.9px;height:231px">
   </body>
