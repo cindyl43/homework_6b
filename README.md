@@ -20,8 +20,10 @@ Cart functions (on product page):
 
 Cart functions (on cart page):
 1. Quantity on cart works across pages.
-2. Click on color/ filling/ quantity and "add" to add new items
-3. Click on "remove" to remove item from the list
+2. Click on color/ filling/ quantity and "add" to add new items.
+   The new items will appear in the list, and the subtotal will be automatically updated.
+3. Click on "remove" to remove item from the list.
+4. Click on "shop more" to go back to the browsing page.
 
 
 # Credits

@@ -93,7 +93,3 @@ function addButton() {
   updatePage()
 }
 
-function removeButton(cartItem) {
-  removeItem(cartItem)
-  updatePage()
-}

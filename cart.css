@@ -90,12 +90,22 @@
 
 }
 
-.checkout {
+/* continue to shop button*/
+.shop {
     position: absolute;
-    top: 26%;
+    top: 50%;
     left: 80.5%;
 
 }
+
+/* continue to shop section */
+.checkout {
+    position: absolute;
+    top: 70%;
+    left: 80.5%;
+
+}
+
 
 .shopping {
     position: absolute;
