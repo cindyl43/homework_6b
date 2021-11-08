@@ -28,20 +28,24 @@ function updatePage() {
   // check if value exists in local storage
   if (cartItemsString !== null) {
     var cartItems = JSON.parse(cartItemsString) // converting stored string to object
-    // update the cart # element
-    var counterNode = document.getElementById("cart-number")
-    counterNode.innerText = cartItems.length
+    // update the cart # element and subtotal
+    var totalQuantity = 0
+      for (let i = 0; i < cartItems.length; i++) {
+        totalQuantity += parseInt(cartItems[i].quantity)
+      }
+      var counterNode = document.getElementById("cart-number")
+      counterNode.innerText = totalQuantity.toString()
+    var subtotal = document.getElementById("subtotal")
+    subtotal.innerText = "$ " + cartItems.length * 11.99
     // for every item in our cart, create a new list item under cart-list
     var cartList = document.getElementById("cart-list")
     cartList.innerHTML = ""
     if (cartItems.length === 0) {
       // if nothing is in the cart, let's show the placeholder text
       document.getElementById("placeholder-text").style.visibility = "visible"
-      document.getElementById("placeholder-money").style.visibility = "visible"
     } else {
       // items are in the cart, hide the placeholder text
       document.getElementById("placeholder-text").style.visibility = "hidden"
-      document.getElementById("placeholder-money").style.visibility = "hidden"
       // iterate through cart and for each item, add it to the list
       for (var i = 0; i < cartItems.length; i++) {
         var cartItem = cartItems[i]
@@ -67,39 +71,48 @@ function addButton() {
   updatePage()
 }
 
+function removeButton(cartItem) {
+  removeItem(cartItem)
+  updatePage()
+}
+
+updatePage()
 /*** Change color function***/
+function colorUpdate() {
+  let colorSelectTag = document.getElementById("color-dropdown")
+  let colorSelectValue = colorSelectTag.options[colorSelectTag.selectedIndex].value
+  switch (colorSelectValue) {
+    case "After school special":
+    greenFocus()
+    break
+    case "Morning haze":
+    pinkFocus()
+    break
+    case "Cozy denim":
+    blueFocus()
+    break
+    case "Raining day":
+    greyFocus()
+    break
+  }
+}
+
 function greenFocus() {
-  document.getElementById("green").src = "green_S.jpg";
-  document.getElementById("pink").src = "pink.jpg";
-  document.getElementById("blue").src = "blue.jpg";
-  document.getElementById("grey").src = "grey.jpg";
   document.getElementById("gallery").src = "gGallery.jpg";
   document.getElementById("large").src = "gLarge.jpg";
 }
 
 function pinkFocus() {
-  document.getElementById("green").src = "green.jpg";
-  document.getElementById("pink").src = "pink_S.jpg";
-  document.getElementById("blue").src = "blue.jpg";
-  document.getElementById("grey").src = "grey.jpg";
   document.getElementById("gallery").src = "pGallery.jpg";
   document.getElementById("large").src = "pLarge.jpg";
 }
 
 function blueFocus() {
-  document.getElementById("green").src = "green.jpg";
-  document.getElementById("pink").src = "pink.jpg";
-  document.getElementById("blue").src = "blue_S.jpg";
-  document.getElementById("grey").src = "grey.jpg";
   document.getElementById("gallery").src = "bGallery.jpg";
   document.getElementById("large").src = "bLarge.jpg";
 }
 
 function greyFocus() {
-  document.getElementById("green").src = "green.jpg";
-  document.getElementById("pink").src = "pink.jpg";
-  document.getElementById("blue").src = "blue.jpg";
-  document.getElementById("grey").src = "grey_S.jpg";
   document.getElementById("gallery").src = "greyGallery.jpg";
   document.getElementById("large").src = "greyLarge.jpg";
 }

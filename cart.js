@@ -51,11 +51,15 @@ function updatePage() {
   // check if value exists in local storage
   if (cartItemsString !== null) {
     var cartItems = JSON.parse(cartItemsString) // converting stored string to object
-    // update the cart # element and subtotal
+       // update the cart # element and subtotal
+    var totalQuantity = 0
+    for (let i = 0; i < cartItems.length; i++) {
+      totalQuantity += parseInt(cartItems[i].quantity)
+    }
     var counterNode = document.getElementById("cart-number")
-    counterNode.innerText = cartItems.length
+    counterNode.innerText = totalQuantity.toString()
     var subtotal = document.getElementById("subtotal")
-    subtotal.innerText = "$ " + cartItems.length * 47.99
+    subtotal.innerText = "$ " + totalQuantity* 11.99
     // for every item in our cart, create a new list item under cart-list
     var cartList = document.getElementById("cart-list")
     cartList.innerHTML = ""
@@ -67,18 +71,17 @@ function updatePage() {
       document.getElementById("placeholder-text").style.visibility = "hidden"
       // iterate through cart and for each item, add it to the list
       for (var i = 0; i < cartItems.length; i++) {
-        var cartItem = cartItems[i]
-        var itemNode = document.createElement("li")
+        const cartItem = cartItems[i]
+        const itemNode = document.createElement("li")
         itemNode.innerText = cartItem.color + " color pillow with " + cartItem.filling + " filling" + "(" + cartItem.quantity + ")"
-
-        // we have to get the cartItem eagerly, but return a function that executes lazily
-        itemNode.onclick = (function (cartItem) {
+        const removeButton = document.createElement("button")
+        removeButton.innerHTML = "remove (X)"
+        removeButton.onclick = function (cartItem) {
           return function() {
             removeItem(cartItem)
           }
-         }(cartItem))
-
-
+        }(cartItem)
+        itemNode.appendChild(removeButton)
         cartList.appendChild(itemNode)
       }
     }
@@ -90,4 +93,7 @@ function addButton() {
   updatePage()
 }
 
-updatePage()
+function removeButton(cartItem) {
+  removeItem(cartItem)
+  updatePage()
+}

@@ -19,7 +19,6 @@
     <img class="login" src="login.jpg" alt="login portal" style="width:40px;height:40px">
     <div>
       <img class="cart" src="cart.jpg" alt="cart" style="width:35px;height:35px">
-      # of items in your cart:
       <span id="cart-number">0</span>
     </div>
     <!-- logo hyperlink-->
@@ -28,7 +27,7 @@
     </a>
   </head>
 
-  <body>
+  <body onload="updatePage()">
     <!-- product page hyperlink-->
     <a href="product.html">
     <img class="back" src="back_c.jpg" alt="back to product page"></a>
@@ -41,7 +40,11 @@
     <!-- <img class="shopping" src="shopping_c.jpg" alt="shopping information section" style="width:976.8px;height:237.6px"> -->
     <div class="shopping">
       <h3>Shopping Cart</h3>
-
+    </div>
+    <!-- presenting picture -->
+    <img id="pic" src="gLarge.jpg" alt="after school special pillow" style="width:50px;height:50px">
+    &nbsp
+    <div class="info">
       Color:
       <select id="color-dropdown">
         <option>After school special</option>
@@ -57,14 +60,17 @@
         <option>Memory foam</option>
       </select>
       &nbsp
-      $ 47.99
+      $ 11.99
+      &nbsp
       Quantity:
       <input id="quantity-number" min=1 type="number" value=1 />
       &nbsp
-      <button href="#0" id="add-button" onclick="addButton()">Update</button>
-      <br>
-      <br>
-      What is in your cart:
+      <button id="add-button" onclick="addButton()">Add</button>
+    </div>
+    <br>
+    <br>
+    <div class="items-in-cart">
+      <h4>Items in your cart</h4>
       <div id="placeholder-text">
         Nothing so far...
       </div>
@@ -73,7 +79,7 @@
       </ul>
     </div>
     <div>
-      <h4>Subtotal</h4>
+      <h4 id="price">Subtotal</h4>
       <span id="subtotal">$&nbsp0</span>
     </div>
 

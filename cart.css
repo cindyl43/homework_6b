@@ -42,6 +42,22 @@
 
 }
 
+#cart-number {
+    position: absolute;
+    top: 6.5%;
+    left: 91.8%;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    padding: 3px 9px 13px 8px;
+    background: #FFD600;
+    text-align: center;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 15px;
+}
+
+
 /* indicator of the quantity (preset as 1 for now) */
 .indicator {
     position: absolute;
@@ -90,7 +106,7 @@
 
 .similar {
     position: absolute;
-    top: 82%;
+    top: 90%;
     left:10%;
 /* black space in bottom of the page*/
     padding-bottom: 50px;
@@ -103,20 +119,44 @@ h3 {
 h4 {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+}
+
+#price {
     position: absolute;
-    top:  60%;
+    top:  61.2%;
     left: 60%;
 }
 
 #subtotal {
     font-family: 'Roboto', sans-serif;
     position: absolute;
-    top:  62.5%;
+    top:  64%;
     left: 67%;
 }
 
+#remove {
+    background-color: white;
+    border: none;
+}
 
+#pic {
+    position: absolute;
+    top: 53%;
+    left: 12%;
+}
 
+.info {
+    position: absolute;
+    top: 55%;
+    left: 17%;
+}
+
+.items-in-cart {
+    position: absolute;
+    top: 62%;
+    left: 12%;
+}
+}
 
 
 

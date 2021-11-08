@@ -44,14 +44,22 @@
 
 }
 
-/* indicator of the quantity (preset as 1 for now) */
-#indicator {
-    position: absolute;
-    top: 55px;
+/* indicator of the quantity */
+#cart-number {
+    position: fixed;
+    top: 50px;
     left: 91.8%;
-    width: 15px;
-    height: 15px;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    padding: 3px 9px 13px 8px;
+    background: #FFD600;
+    text-align: center;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 15px;
 }
+
 
 #logo {
   width: 18%;
@@ -84,11 +92,18 @@
 
 }
 
-#color {
+.color {
     position: absolute;
     top: 50%;
     left: 60%;
     font-size: 20px;
+}
+
+#color-dropdown {
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    font-size: 15px;
 }
 
 /* Different color filters */
@@ -127,12 +142,18 @@
 }
 
 
-
 .filling {
     position: absolute;
     top: 62%;
     left: 60%;
     font-size: 20px;
+}
+
+#filling-dropdown {
+    position: absolute;
+    top: 67%;
+    left: 60%;
+    font-size: 15px;
 }
 
 
@@ -165,17 +186,31 @@
 }
 
 
-#quantity {
+#quantity-number {
     position: absolute;
     top: 75%;
     left: 66%;
+    width: 70px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 2px black solid;
 }
 
 
-#add {
+#add-button {
     position: absolute;
     top: 74%;
-    left: 74%;
+    left: 80%;
+    font-size: 17px;
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    background-color: #FFD600;
+    border-radius: 10px;
+    border: 2px black solid;
+}
+
+.info {
+    visibility: hidden;
 }
 
 
