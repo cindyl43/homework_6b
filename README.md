@@ -1,20 +1,27 @@
 # homework_6b
 1. homepage
    -- click on either the picture of the "couch Pillow" or the text to enter the product browsing page
-   -- click on the cart icon to go to the cart page (preset as quantity 1)
+   -- click on the cart icon to go to the cart page
 2. product browsing page
    -- click on the logo to go back to the homepage
    -- click on photo on the top right corner to go to the product detail page
-   -- click on the cart icon to go to the cart page (preset as quantity 1)
+   -- click on the cart icon to go to the cart page
 3. Product detail page
    -- click on the logo to go back to the homepage
    -- click on the back button to go back to the product browsing page
-   -- click on the cart icon to go to the cart page (preset as quantity 1)
-4. Cart page (preset as quantity 1)
+   -- click on the cart icon to go to the cart page
+4. Cart page
    -- click on the logo to go back to the homepage
    -- click on the back button to go back to the product detail page
 
-Cart functions:
+Cart functions (on product page):
+1. Quantity on cart works across pages.
+2. Click on color/ filling/ quantity and "add to cart" to add new items to the cart [and would show on the cart page in "Items in your cart"]
+
+Cart functions (on cart page):
+1. Quantity on cart works across pages.
+2. Click on color/ filling/ quantity and "add" to add new items
+3. Click on "remove" to remove item from the list
 
 
 # Credits
